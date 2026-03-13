@@ -1,0 +1,113 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - system_status
+  - environmental_monitoring
+  - automated_irrigation
+  - nutrient_management
+  - lighting_control
+  - pest_detection
+  - crop_yield_prediction
+  - advanced_diagnostics
+  - energy_efficiency
+  - ai_learning_mode
+  - remote_access
+  
+entities:
+  - temperature
+  - humidity
+  - CO2
+  - nutrient
+  - pests
+  - energy
+  - AI_models
+  - growth_rate
+  
+slots:
+  temperature:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: temperature
+  humidity:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: humidity
+  CO2:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: CO2
+  nutrient:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: nutrient
+  pests:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pests
+  energy:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: energy
+  AI_models:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: AI_models
+  growth_rate:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: growth_rate
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today in managing your greenhouse?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day managing your plants."
+  utter_ask_affirm:
+    - text: "Got it! Do you want to proceed?"
+  utter_mood_great:
+    - text: "That's awesome! How can I make it even better for you?"
+  utter_mood_unhappy:
+    - text: "Oh no! I'm here to help. What can I do to make things better?"
+  utter_bot_challenge:
+    - text: "I am an AI assistant here to help you with your greenhouse management."
+  utter_system_status:
+    - text: "The current system status is optimal. Would you like to check specific components?"
+  utter_environmental_monitoring:
+    - text: "Here is the current environmental data: Temperature: {temperature}, Humidity: {humidity}, CO2: {CO2}."
+  utter_automated_irrigation:
+    - text: "The irrigation system is functioning optimally. Would you like to adjust settings?"
+  utter_nutrient_management:
+    - text: "Nutrient levels are stable. Let me know if you want to adjust delivery."
+  utter_lighting_control:
+    - text: "Lighting system is operational. Do you want to configure custom settings?"
+  utter_pest_detection:
+    - text: "Pest detection is clear. No threats detected."
+  utter_crop_yield_prediction:
+    - text: "Based on current data, the expected yield looks promising!"
+  utter_advanced_diagnostics:
+    - text: "Running advanced diagnostics. This may take a few moments."
+  utter_energy_efficiency:
+    - text: "Energy consumption is within the expected range. Let me know if you'd like optimizations."
+  utter_ai_learning_mode:
+    - text: "AI model learning is in progress. Would you like to refine any algorithms?"
+  utter_remote_access:
+    - text: "Remote access enabled. You can now monitor and control your greenhouse from anywhere."
+    
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
