@@ -1,0 +1,83 @@
+version: "3.0"
+nlu:
+  - intent: greenhouse_status
+    examples: |
+      - greenhouse status?
+      - system health check
+      - greenhouse performance report
+      - are all systems operational?
+      - check greenhouse sensors
+      - overall system diagnostics
+      - greenhouse system overview
+
+  - intent: environmental_conditions
+    examples: |
+      - current temperature in greenhouse
+      - humidity levels
+      - CO2 concentration
+      - air quality metrics
+      - climate control status
+      - environmental data summary
+      - greenhouse atmospheric conditions
+      - sensor readings right now
+      - compare current conditions to optimal range
+
+  - intent: irrigation_control
+    examples: |
+      - water plants automatically
+      - irrigation system status
+      - schedule watering cycle
+      - adjust watering settings
+      - check water reservoir
+      - moisture level monitoring
+      - customize irrigation parameters
+      - smart watering recommendations
+      - precision hydration control
+
+  - intent: pest_management
+    examples: |
+      - scan for plant pests
+      - pest detection report
+      - automated pest monitoring
+      - insect identification
+      - disease risk assessment
+      - plant health scan
+      - early pest warning
+      - biological threat detection
+      - quarantine infected plants
+
+  - intent: harvest_predictions
+    examples: |
+      - expected harvest predictions
+      - crop growth forecast
+      - estimated yield calculation
+      - plant development models
+      - growth rate analysis
+      - productivity projections
+      - biomass estimation
+      - potential harvest volumes
+      - crop performance metrics
+
+  - intent: plant_health_analysis
+    examples: |
+      - detailed plant health analysis
+      - stress factor detection
+      - genetic performance tracking
+      - plant biochemical assessment
+      - advanced growth monitoring
+      - physiological stress indicators
+      - plant resilience evaluation
+      - comprehensive diagnostic scan
+      - molecular health assessment
+
+  - intent: energy_consumption
+    examples: |
+      - greenhouse energy consumption
+      - power usage optimization
+      - renewable energy integration
+      - carbon footprint tracking
+      - energy efficiency report
+      - sustainable operation metrics
+      - power consumption analysis
+      - green energy strategies
+      - electrical system performance

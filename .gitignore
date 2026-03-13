@@ -1,0 +1,11 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Rasa runtime cache artifacts
+.rasa/cache/
+
+# Local environment files
+.venv/
+venv/
+.env

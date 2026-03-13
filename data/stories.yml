@@ -1,0 +1,99 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet_and_check_status
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: system_status
+    - action: utter_system_status
+
+- story: ask_about_environment
+  steps:
+    - intent: environmental_monitoring
+    - action: utter_environmental_monitoring
+
+- story: irrigation_control
+  steps:
+    - intent: automated_irrigation
+    - action: utter_automated_irrigation
+
+- story: nutrient_check
+  steps:
+    - intent: nutrient_management
+    - action: utter_nutrient_management
+
+- story: lighting_control_query
+  steps:
+    - intent: lighting_control
+    - action: utter_lighting_control
+
+- story: pest_detection_request
+  steps:
+    - intent: pest_detection
+    - action: utter_pest_detection
+
+- story: crop_prediction
+  steps:
+    - intent: crop_yield_prediction
+    - action: utter_crop_yield_prediction
+
+- story: advanced_diagnostics_query
+  steps:
+    - intent: advanced_diagnostics
+    - action: utter_advanced_diagnostics
+
+- story: energy_efficiency_query
+  steps:
+    - intent: energy_efficiency
+    - action: utter_energy_efficiency
+
+- story: ai_learning_mode_update
+  steps:
+    - intent: ai_learning_mode
+    - action: utter_ai_learning_mode
+
+- story: remote_access_control
+  steps:
+    - intent: remote_access
+    - action: utter_remote_access
+
+- story: fallback_handling
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: unknown_intent
+    - action: utter_default
+
+- story: goodbye_conversation
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
