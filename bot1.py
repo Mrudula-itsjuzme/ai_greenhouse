@@ -15,7 +15,7 @@ import pyttsx3
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
-import numpy as np
+import numpy as np`nfrom typing import Dict, Any
 
 # Arduino Constants
 ARDUINO_PORT = os.getenv("ARDUINO_PORT", "/dev/cu.usbserial-1130")  # Override with ARDUINO_PORT env var
@@ -39,7 +39,7 @@ class ArduinoThread(QThread):
         self.running = True
         self.ser = None
     
-    def run(self):
+    def run(self) -> None:
         try:
             self.ser = serial.Serial(ARDUINO_PORT, BAUD_RATE)
             time.sleep(2)  # Wait for Arduino to initialize
@@ -74,7 +74,7 @@ class ArduinoThread(QThread):
 class SpeechThread(QThread):
     finished = pyqtSignal(str)
     
-    def run(self):
+    def run(self) -> None:
         recognizer = sr.Recognizer()
         with sr.Microphone() as source:
             audio = recognizer.listen(source)
