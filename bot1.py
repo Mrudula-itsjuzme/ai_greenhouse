@@ -18,7 +18,7 @@ from wordcloud import WordCloud
 import numpy as np
 
 # Arduino Constants
-ARDUINO_PORT = "/dev/cu.usbserial-1130"  # Change this as needed
+ARDUINO_PORT = os.getenv("ARDUINO_PORT", "/dev/cu.usbserial-1130")  # Override with ARDUINO_PORT env var
 BAUD_RATE = 9600
 
 # Plant Thresholds
@@ -34,8 +34,8 @@ class ArduinoThread(QThread):
     sensor_data = pyqtSignal(dict)
     error = pyqtSignal(str)
     
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.running = True
         self.ser = None
     
@@ -85,8 +85,8 @@ class SpeechThread(QThread):
                 self.finished.emit("")
 
 class ChatbotApp(QWidget):
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.chat_history = []
         self.notification_enabled = False
         self.tts_engine = pyttsx3.init()
