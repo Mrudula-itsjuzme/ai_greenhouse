@@ -1,8 +1,9 @@
+import os
 import serial
 import time
 
 # Update with the correct port (check in Arduino IDE -> Tools -> Port)
-arduino_port = "/dev/cu.usbserial-1130"  # Change this as needed
+arduino_port = os.getenv("ARDUINO_PORT", "/dev/cu.usbserial-1130")  # Override with ARDUINO_PORT
 baud_rate = 9600  # Must match the baud rate in the Arduino sketch
 
 # Thresholds for Spider Plant
@@ -14,7 +15,7 @@ SUNLIGHT_MIN = 500 # Minimum sunlight in lux
 SUNLIGHT_MAX = 1500 # Maximum sunlight in lux
 SOIL_MOISTURE_THRESHOLD = 40  # Minimum soil moisture in %
 
-def get_suggestions(temp, humidity, sunlight, soil_moisture):
+def get_suggestions(temp: float, humidity: float, sunlight: float, soil_moisture: float) -> list[str]:
     suggestions = []
     if temp < TEMP_MIN:
         suggestions.append("Increase temperature to maintain optimal growth conditions.")
