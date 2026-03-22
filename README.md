@@ -1,9 +1,6 @@
-# ai_greenhouse
+# AI Greenhouse
 
-> **Smart Plant Care Assistant**  
-> AI-powered desktop app for real-time greenhouse monitoring, analytics, and automation.
-
----
+Smart Plant Care Assistant - An intelligent desktop application for real-time greenhouse monitoring, analytics, and automation.
 
 ## Table of Contents
 
@@ -16,86 +13,66 @@
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 
----
-
 ## Overview
 
-**ai_greenhouse** is an intelligent desktop application that helps you monitor and automate plant care in your greenhouse. It integrates with Arduino sensors to track environmental conditions and uses AI to provide actionable insights, notifications, and interactive chatbot support.
-
----
+**AI Greenhouse** is a desktop application designed to monitor and automate plant care. It integrates with Arduino sensors to track environmental conditions such as temperature, humidity, sunlight, and soil moisture. The application provides actionable insights, notifications, and interactive chatbot support.
 
 ## Features
 
-- 🌱 Real-time monitoring: Temperature, humidity, sunlight, soil moisture
-- 🤖 AI Chatbot: Plant care Q&A, sentiment analysis, FAQ, voice input, TTS
-- 📊 Analytics: Sensor history graphs, wordclouds, interaction analytics
-- 🔔 Notifications: System tray alerts for plant care events
-- 💾 Data export: Save chat history (txt/csv/json)
-- 🖼️ File upload: Attach images to chat
-- 🛠️ Arduino integration: Automated watering based on soil moisture
-
----
+- **Real-time Monitoring:** Tracking of temperature, humidity, sunlight, and soil moisture.
+- **AI Chatbot:** Support for plant care queries, sentiment analysis, voice input, and Text-to-Speech (TTS).
+- **Analytics:** Visualization of sensor history, interaction analytics, and wordclouds.
+- **Notifications:** System tray alerts for critical plant care events.
+- **Data Management:** Export chat history in TXT, CSV, or JSON formats and support for image uploads.
+- **Automation:** Arduino integration for automated watering based on soil moisture levels.
 
 ## Architecture
 
-- **Frontend**: PyQt5 desktop UI
-- **Backend**: Python, Arduino serial communication
-- **AI/ML**: TextBlob (sentiment), speech_recognition, pyttsx3, wordcloud, matplotlib
-
----
+- **Frontend:** PyQt5 desktop UI.
+- **Backend:** Python with Arduino serial communication.
+- **AI/ML Integration:** TextBlob, speech_recognition, pyttsx3, wordcloud, and matplotlib.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- Arduino (with compatible sensors)
-- pip
+- Python 3.8 or higher.
+- Arduino board with compatible sensors.
+- pip package manager.
 
 ### Installation
 
-```bash
-git clone https://github.com/Mrudula-itsjuzme/ai_greenhouse.git
-cd ai_greenhouse
-pip install -r requirements.txt
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mrudula-itsjuzme/ai_greenhouse.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ai_greenhouse
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Arduino Setup
+### Arduino Configuration
 
-- Upload the provided Arduino sketch to your board.
-- Connect sensors (temperature, humidity, light, soil moisture).
-- Update `ARDUINO_PORT` in `bot1.py` and `python.py` as needed.
-
----
+- Upload the provided Arduino sketch to the board.
+- Connect the necessary sensors.
+- Configure the `ARDUINO_PORT` in `bot1.py` and `python.py`.
 
 ## Usage
 
+Start the application by running:
 ```bash
 python bot1.py
 ```
 
-- Use the chatbot to ask plant care questions.
-- View real-time sensor data and analytics.
-- Enable notifications and voice input as needed.
-
----
-
-## Configuration
-
-- Edit `ARDUINO_PORT` and sensor thresholds in `bot1.py`/`python.py`.
-- Customize themes and FAQ in the UI.
-
----
-
 ## Contributing
 
-We welcome contributions! Please open issues or pull requests for bug fixes, features, or documentation improvements.
-
----
+Contributions are welcome. Please submit an issue or pull request for any bugs or feature enhancements.
 
 ## Acknowledgements
 
-- PyQt5, matplotlib, wordcloud, textblob, pyttsx3, speech_recognition
-- Arduino community for sensor integration guides
-
----
+- Built with PyQt5, matplotlib, wordcloud, textblob, pyttsx3, and speech_recognition.
+- Thanks to the Arduino community for sensor integration resources.
