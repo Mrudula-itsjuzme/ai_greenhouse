@@ -1,78 +1,124 @@
 # AI Greenhouse
 
-Smart Plant Care Assistant - An intelligent desktop application for real-time greenhouse monitoring, analytics, and automation.
+A smart plant-care desktop application for greenhouse monitoring, sensor analytics, chatbot support, and Arduino-based automation.
 
-## Table of Contents
+This project combines IoT, desktop UI design, and lightweight AI features to make plant monitoring more interactive and beginner-friendly.
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
+---
 
-## Overview
+## Problem statement
 
-**AI Greenhouse** is a desktop application designed to monitor and automate plant care. It integrates with Arduino sensors to track environmental conditions such as temperature, humidity, sunlight, and soil moisture. The application provides actionable insights, notifications, and interactive chatbot support.
+Greenhouse plants need consistent monitoring of temperature, humidity, light, and soil moisture. Manual monitoring is easy to forget and hard to scale.
+
+AI Greenhouse provides a desktop dashboard that reads sensor data, visualizes trends, sends alerts, and supports plant-care interactions through a chatbot-style assistant.
+
+---
 
 ## Features
 
-- **Real-time Monitoring:** Tracking of temperature, humidity, sunlight, and soil moisture.
-- **AI Chatbot:** Support for plant care queries, sentiment analysis, voice input, and Text-to-Speech (TTS).
-- **Analytics:** Visualization of sensor history, interaction analytics, and wordclouds.
-- **Notifications:** System tray alerts for critical plant care events.
-- **Data Management:** Export chat history in TXT, CSV, or JSON formats and support for image uploads.
-- **Automation:** Arduino integration for automated watering based on soil moisture levels.
+- real-time temperature, humidity, sunlight, and soil-moisture monitoring
+- Arduino serial communication
+- automated watering logic based on soil-moisture readings
+- PyQt5 desktop interface
+- chatbot support for plant-care questions
+- sentiment analysis and voice input
+- text-to-speech output
+- sensor-history analytics and visualizations
+- system-tray notifications
+- chat-history export in TXT, CSV, and JSON formats
+- image-upload support
 
-## Architecture
+---
 
-- **Frontend:** PyQt5 desktop UI.
-- **Backend:** Python with Arduino serial communication.
-- **AI/ML Integration:** TextBlob, speech_recognition, pyttsx3, wordcloud, and matplotlib.
+## System overview
 
-## Getting Started
+```text
+Arduino Sensors
+      ↓
+Serial Communication
+      ↓
+Python Backend
+      ↓
+PyQt5 Dashboard
+      ↓
+Analytics + Alerts + Chatbot
+      ↓
+Automation Decisions
+```
 
-### Prerequisites
+---
 
-- Python 3.8 or higher.
-- Arduino board with compatible sensors.
-- pip package manager.
+## Tech stack
 
-### Installation
+- Python
+- PyQt5
+- Arduino
+- Serial communication
+- Matplotlib
+- WordCloud
+- TextBlob
+- speech_recognition
+- pyttsx3
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Mrudula-itsjuzme/ai_greenhouse.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd ai_greenhouse
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-### Arduino Configuration
+## Quick start
 
-- Upload the provided Arduino sketch to the board.
-- Connect the necessary sensors.
-- Configure the `ARDUINO_PORT` in `bot1.py` and `python.py`.
-
-## Usage
-
-Start the application by running:
 ```bash
+git clone https://github.com/Mrudula-itsjuzme/ai_greenhouse.git
+cd ai_greenhouse
+
+pip install -r requirements.txt
 python bot1.py
 ```
 
-## Contributing
+---
 
-Contributions are welcome. Please submit an issue or pull request for any bugs or feature enhancements.
+## Arduino setup
 
-## Acknowledgements
+1. Upload the Arduino sketch used by the project.
+2. Connect sensors for temperature, humidity, sunlight, and soil moisture.
+3. Check the Arduino serial port.
+4. Update the port configuration in the Python files, especially:
 
-- Built with PyQt5, matplotlib, wordcloud, textblob, pyttsx3, and speech_recognition.
-- Thanks to the Arduino community for sensor integration resources.
+```text
+bot1.py
+python.py
+```
+
+Look for the `ARDUINO_PORT` setting and replace it with your local port.
+
+---
+
+## Repository structure
+
+```text
+ai_greenhouse/
+├── bot1.py          # main desktop application entry point
+├── python.py        # Arduino / sensor communication logic
+├── requirements.txt # Python dependencies
+└── README.md
+```
+
+---
+
+## Why this project matters
+
+This project is a practical IoT automation prototype. It shows how environmental sensing, desktop UI design, and automation logic can work together in a real plant-care workflow.
+
+---
+
+## Future improvements
+
+- add screenshots of the dashboard
+- add Arduino wiring diagrams
+- move configuration into a `.env` or config file
+- add database-backed sensor history
+- add threshold customization from the UI
+- package the app as an executable
+
+---
+
+## Author
+
+Built by [Pedamallu Sai Mrudula](https://github.com/Mrudula-itsjuzme) as part of an applied AI, IoT, and automation portfolio.
