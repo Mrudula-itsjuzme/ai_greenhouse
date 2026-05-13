@@ -6,6 +6,19 @@ This project combines IoT, desktop UI design, and lightweight AI features to mak
 
 ---
 
+## Project links and evidence
+
+| Item | Link / Note |
+|---|---|
+| Repository | https://github.com/Mrudula-itsjuzme/ai_greenhouse |
+| Paper / reference | No paper attached; applied IoT automation prototype |
+| Demo video | Not uploaded yet |
+| Deployment | Local desktop application; no hosted deployment |
+| Dataset note | Uses live Arduino sensor readings for temperature, humidity, sunlight, and soil moisture |
+| Result screenshots | Dashboard screenshots and wiring images should be added in a future `screenshots/` or `docs/` folder |
+
+---
+
 ## Problem statement
 
 Greenhouse plants need consistent monitoring of temperature, humidity, light, and soil moisture. Manual monitoring is easy to forget and hard to scale.
